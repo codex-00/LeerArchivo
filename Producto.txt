@@ -1,0 +1,10 @@
+1,Camisa,10,25.00
+2,Pantalón,15,35.00
+3,Zapatilla,20,50.00
+4,Mochila,5,40.00
+5,Gorra,8,15.00
+6,Taza,12,20.00
+7,Libro,3,30.00
+8,Lápiz,25,0.50
+9,Goma,18,0.25
+10,Celular,2,200.00
