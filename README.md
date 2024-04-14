@@ -18,11 +18,11 @@ Los archivos de datos utilizados por el programa están en formato CSV (valores 
 
 - **`cliente.txt`**: Contiene la información de los clientes (id, nombre, apellido, teléfono).
 
-- **`venta.txt`**: Contiene la información de las ventas (id, fecha, idCliente, monto).
+- **`venta.txt`**: Contiene la información de las ventas (id, fecha, idCliente, total).
 
 - **`detalle.txt`**: Contiene los detalles de las ventas (idVenta, idProducto, cantidad, precioUnitario).
 
-- **`producto.txt`**: Contiene la información de los productos (id, nombre, stock, precio).
+- **`producto.txt`**: Contiene la información de los productos (id, nombre, cantidad, precio).
 
 ## Funcionalidades del Menú
 
@@ -42,7 +42,7 @@ El programa presenta las siguientes funcionalidades en el menú:
 
 Para ejecutar el programa, simplemente sigue estos pasos:
 
-1. Abre el proyecto en tu entorno de desarrollo Java (como Eclipse).
+1. Abre el proyecto en tu entorno de desarrollo Java (en mi caso, Eclipse).
   
 2. Ejecuta la clase `MenuPrincipal` ubicada en el paquete `ar.com.unpaz.main`.
   
