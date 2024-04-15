@@ -11,6 +11,7 @@ import ar.com.unpaz.model.Detalle;
 import ar.com.unpaz.repository.DetalleRepository;
 import ar.com.unpaz.model.Producto;
 import ar.com.unpaz.repository.ProductoRepository;
+import ar.com.unpaz.repository.InformeRepository;
 
 public class MenuPrincipal {
     public static void main(String[] args) {
@@ -19,23 +20,25 @@ public class MenuPrincipal {
         VentaRepository ventaRepository = new VentaRepository();
         DetalleRepository detalleRepository = new DetalleRepository();
         ProductoRepository productoRepository = new ProductoRepository();
+        InformeRepository informeRepository = new InformeRepository();
         
         while (true) {
-            System.out.println("Menú:");
+            System.out.println("MENÚ:");
             System.out.println("1. LEER ARCHIVO CLIENTE");
             System.out.println("2. LEER ARCHIVO VENTA");
             System.out.println("3. LEER ARCHIVO DETALLE");
             System.out.println("4. LEER ARCHIVO PRODUCTO");
             System.out.println("5. LEER COMPLETO");
+            System.out.println("6. MOSTRAR INFORMES");
             System.out.println("0. SALIR");
-            System.out.print("Ingrese opción: ");
+            System.out.print("INGRESE UNA OPCIÓN: ");
 
             int opcion = scanner.nextInt();
-            scanner.nextLine(); // Consumir el salto de línea
+            scanner.nextLine();
 
             switch (opcion) {
                 case 0:
-                    System.out.println("Saliendo...");
+                    System.out.println("SALIENDO...");
                     scanner.close();
                     System.exit(0);
                 case 1:
@@ -104,8 +107,11 @@ public class MenuPrincipal {
                          System.out.println("ID: " + producto.getId() + ", Nombre: " + producto.getNombre() + ", Cantidad: " + producto.getCantidad() + ", Precio: $" + producto.getPrecio());
                      }
                     break;
+                case 6:
+                    informeRepository.generarInforme(clienteRepository, ventaRepository);
+                    break;
                 default:
-                    System.out.println("Opción inválida. Intente de nuevo.");
+                    System.out.println("OPCIÓN INVÁLIDA. INTENTE DE NUEVO.");
             }
         }
     }
